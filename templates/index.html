@@ -1,0 +1,159 @@
+<!Doctype >
+<html>
+    <head>
+        <title>Web Development - About the Web</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    
+    <nav>
+        <ul id="navbar">
+            <li><a href="/">About the Web</a></li>
+            <li><a href="/practice">Practice</a></li>
+            <li><a href="/test" class="active">Test Your Knowledge</a></li>
+        </ul>
+    </nav>
+
+    <body>
+        <header>
+            <h1>Learn About Web Development</h1>
+            <em>An overview of the history of the web and the basics of web development</em>  
+        </header>
+        <h2>History of the World Wide Web</h2>
+        <h3>The Early Web</h3>
+        <p>The World Wide Web was created by Tim Berners-Lee, with the original intent of sharing academic papers.</p>
+        <p>Documents on the internet, markup languages, and hypertext were brought together to form an early iteration of the web.  Hypertext, inspired by Hypercard, was first used to link related academic papers on the web.</p>
+        <p></p>
+
+        <h3>Further Contributions</h3>
+        <p>Marc Andreesen created the first graphical web browser for common operating systems.  Andreesen also proposed the img tag, allowing inline images to be displayed on the web for the first time.</p>
+        <p>Today, the W3C (World Wide Web Consortium) is responsible for recommendations and prototypes for web browsers and other web technologies.</p>
+
+        <h2>HTML</h2>
+        <h3>What it is</h3>
+        <p>HTML stands for Hypertext Markup Language.  HTML is the set of markup symbols/codes in a file that is intended to be displayed on a web page.  Each page element is enclosed in a tag/pair of tags.  Tags are enclosed in angle brackets and usually come as a pair of opening and closing tags.  Some tags (e.g. img, doctype, meta) are self-closing and do not have a separate closing tag.  Most tags (not div or span) have semantic meaning and should be used to properly organize the webpage's content.</p>
+        <h3>Important tags</h3>
+        <table>
+            <thead>
+                <th>Tag</th>
+                <th>Use/Meaning</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>nav</td>
+                    <td>Site navigation</td>
+                </tr>
+                <tr>
+                    <td>h1 ... h6</td>
+                    <td>Headings (levels 1-6)</td>
+                </tr>
+                <tr>
+                    <td>p</td>
+                    <td>Paragraph</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>Anchor text (hyperlinks)</td>
+                </tr>
+                <tr>
+                    <td>img</td>
+                    <td>Image</td>
+                </tr>
+                <tr>
+                    <td>ol</td>
+                    <td>Ordered (numberd) list</td>
+                </tr>
+                <tr>
+                    <td>ul</td>
+                    <td>Unordered (bulleted) list</td>
+                </tr>
+                <tr>
+                    <td>li</td>
+                    <td>Individual list item</td>
+                </tr>
+                <tr>
+                    <td>div</td>
+                    <td>Groups elements together, stacked vertically</td>
+                </tr>
+                <tr>
+                    <td>span</td>
+                    <td>Groups elements together, side-by-side</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>CSS</h2>
+        <h3>What it is</h3>
+        <p>CSS stands for Cascading Style Sheets.  CSS is a modified form of style sheets fit to control the visual presentation of a webpage.  CSS is used to control the formatting, layout, and navigation of elements on a page, as well as the page as a whole.  CSS files are linked to in the head of HTML files.  An HTML file can have more than one CSS file.</p>
+        <p>CSS files are made up of rules defined for specific types of HTML elements.  A rule has a selector, which designates the HTML elements affected, and a declaration, a declaration property and the declaration property's value.  CSS rules follow the syntax: <em>selector{declaration property: declaration value;}</em></p>
+        <h3>Important selectors</h3>
+        <table>
+            <thead>
+                <th>Selector</th>
+                <th>Use</th>
+                <th>Syntax</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>element</td>
+                    <td>styles all cases of that element</td>
+                    <td>element tag {}</td>
+                </tr>
+                <tr>
+                    <td>class</td>
+                    <td>can give multiple elements multiple classes</td>
+                    <td>.class {}</td>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>one spot on a webpage, one id per element</td>
+                    <td>#id {}</td>
+                </tr>
+                <tr>
+                    <td>descendent</td>
+                    <td>styles all elements within a different element</td>
+                    <td>larger element child element {}</td>
+                </tr>
+                <tr>
+                    <td>pseudo</td>
+                    <td>specific states of anchor elements or specific child of an element</td>
+                    <td>:pseudo-selector {}</td>
+                </tr>
+                <tr>
+                    <td>grouped</td>
+                    <td>different selectors sharing the same rules</td>
+                    <td>selector, different selector {}</td>
+                </tr>
+                <tr>
+                    <td>compound</td>
+                    <td>classes of specific elements</td>
+                    <td>element.class {}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Frameworks</h2>
+        <h3>What they are</h3>
+        <p>Web frameworks are software platforms used for developing web application and sites.  Web frameworks include pre-written components, code snippets, and application templates to streamline the development process.</p>
+        <h3>Popular Frameworks</h3>
+        <h4>CSS</h4>
+        <ul>
+            <li>Bootstrap</li>
+            <li>Tailwind</li>
+            <li>Bulma</li>
+            <li>UIkit</li>
+        </ul>
+        <h4>Frontend</h4>
+        <ul>
+            <li>React</li>
+            <li>Angular</li>
+            <li>Vue</li>
+        </ul>
+        <h4>Backend</h4>
+        <ul>
+            <li>Spring</li>
+            <li>Django</li>
+            <li>Express.js</li>
+        </ul>
+    </body>
+</html>

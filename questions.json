@@ -1,0 +1,146 @@
+{
+    "history": {
+        "q1": {
+            "question": "What was the original purpose of the World Wide Web?",
+            "answer": "sharing academic papers",
+            "wrong1": "online shopping",
+            "wrong2": "messaging long-distance friends",
+            "wrong3": "sharing computer viruses"
+        },
+        "q2": {
+            "question": "What was the original purpose of hypertext?",
+            "answer": "linking to other academic papers on the web",
+            "wrong1": "advertising links",
+            "wrong2": "sending links to friends",
+            "wrong3": "sharing computer viruses"
+        },
+        "q3": {
+            "question": "Who is credited with creating the World Wide Web?",
+            "answer": "Tim Berners-Lee",
+            "wrong1": "Marc Andreesen",
+            "wrong2": "The W3C",
+            "wrong3": "Mozilla"
+        },
+        "q4": {
+            "question": "Who is credited with creating hypertext?",
+            "answer": "Tim Berners-Lee",
+            "wrong1": "Marc Andreesen",
+            "wrong2": "The W3C",
+            "wrong3": "Mozilla"
+        },
+        "q5": {
+            "question": "Who is credited with creating the img tag?",
+            "answer": "Marc Andreesen",
+            "wrong1": "Tim Berners-Lee",
+            "wrong2": "The W3C",
+            "wrong3": "Google"
+        },
+        "q6": {
+            "question": "Who is credited with creating the first graphical web browser?",
+            "answer": "Marc Andreesen",
+            "wrong1": "Tim Berners-Lee",
+            "wrong2": "The W3C",
+            "wrong3": "Google"
+        },
+        "q7": {
+            "question": "What does W3C stand for?",
+            "answer": "World Wide Web Consortium",
+            "wrong1": "World Wide Web Committee",
+            "wrong2": "World Wide Web Collective",
+            "wrong3": "World Wide Web Commission"
+        },
+        "q8": {
+            "question": "Who is responsible for current changes in web browsers and technologies?",
+            "answer": "The W3C",
+            "wrong1": "Tim Berners-Lee",
+            "wrong2": "Marc Andreesen",
+            "wrong3": "Google"
+        }
+    },
+    "development": {
+        "q1": {
+            "question": "What types of brackets are used for HTML tags?",
+            "answer": "angle",
+            "wrong1": "parentheses",
+            "wrong2": "square",
+            "wrong3": "curly braces"
+        },
+        "q2": {
+            "question": "Which HTML tag is self-closing?",
+            "answer": "meta",
+            "wrong1": "h1",
+            "wrong2": "div",
+            "wrong3": "li"
+        },
+        "q3": {
+            "question": "Which tag is not semantic?",
+            "answer": "div",
+            "wrong1": "img",
+            "wrong2": "p",
+            "wrong3": "a"
+        },
+        "q4": {
+            "question": "What does HTML stand for?",
+            "answer": "Hypertext Markup Language",
+            "wrong1": "Hypertext Modern Language",
+            "wrong2": "Hypertext Markdown Language",
+            "wrong3": "Hypertext Transferred Markup Language"
+        },
+        "q5": {
+            "question": "What does CSS stand for?",
+            "answer": "Cascading Stylesheets",
+            "wrong1": "Cascading Style Syntax",
+            "wrong2": "Creating Styled Sites",
+            "wrong3": "Creative Site Syntax"
+        },
+        "q6": {
+            "question": "Where are CSS files linked to in a web page?",
+            "answer": "head element of the HTML file",
+            "wrong1": "bottom of the HTML file",
+            "wrong2": "before the footer of the HTML file",
+            "wrong3": "top of the HTML file"
+        },
+        "q7": {
+            "question": "Which of the following is proper syntax for a CSS rule?",
+            "answer": "selector {declaration property: declaration value;}",
+            "wrong1": "selector {declaration property = declaration value;}",
+            "wrong2": "selector {declaration property: declaration value}",
+            "wrong3": "selector {declaration property = declaration value};"
+        },
+        "q8": {
+            "question": "Which of the following does CSS NOT control?",
+            "answer": "database interactions",
+            "wrong1": "navigation",
+            "wrong2": "layout",
+            "wrong3": "formatting"
+        },
+        "q9": {
+            "question": "Which is something a web framework does NOT provide?",
+            "answer": "pre-written completed websites",
+            "wrong1": "pre-written components",
+            "wrong2": "code snippets",
+            "wrong3": "application templates"
+        },
+        "q10": {
+            "question": "Which of the following is NOT a CSS framework?",
+            "answer": "Angular",
+            "wrong1": "Bootstrap",
+            "wrong2": "Bulma",
+            "wrong3": "Tailwind"
+        },
+        "q11": {
+            "question": "Which of the following is NOT a frontend framework?",
+            "answer": "Bulma",
+            "wrong1": "Vue",
+            "wrong2": "React",
+            "wrong3": "Angular"
+        },
+        "q12": {
+            "question": "Which of the following is NOT a backend framework?",
+            "answer": "Tailwind",
+            "wrong1": "Express.js",
+            "wrong2": "Django",
+            "wrong3": "Spring"
+        }
+    }
+}

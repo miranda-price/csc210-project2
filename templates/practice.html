@@ -1,0 +1,136 @@
+<!Doctype >
+<html>
+    <head>
+        <title>Web Development - Practice</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    
+    <nav>
+        <ul id="navbar">
+            <li><a href="/">About the Web</a></li>
+            <li><a href="/practice">Practice</a></li>
+            <li><a href="/test" class="active">Test Your Knowledge</a></li>
+        </ul>
+    </nav>
+
+    <body>
+        <header>
+            <h1>Practice What You Learned</h1>
+            <em>Play our matching game and see how you rank</em> 
+        </header>
+
+        <!--JS matching game-->
+        <div id="matching-container">
+            <div class="matching-set" id="matching-history">
+                <div class="set-header">
+                    <h2>Web History</h2>
+                    <h3>Match the creator to the creation</h3>
+                </div>
+                <div class="cards">
+                    <div class="matching-col left">
+                        <div class="matching-card" id="history-left-1">Tim Berners-Lee</div>
+                        <div class="matching-card" id="history-left-2">Marc Andreesen</div>
+                        <div class="matching-card" id="history-left-3">Marc Andreesen</div>
+                        <div class="matching-card" id="history-left-4">W3C</div>
+                        <div class="matching-card" id="history-left-5">Tim Berners-Lee</div>
+                        <div class="matching-card" id="history-left-6">W3C</div>
+                    </div>
+                    <div class="matching-col right">
+                        <div class="matching-card" id="history-right-1">recommendations for web technologies</div>
+                        <div class="matching-card" id="history-right-2">hypertext</div>
+                        <div class="matching-card" id="history-right-3">recommendations for browsers</div>
+                        <div class="matching-card" id="history-right-4">img tag</div>
+                        <div class="matching-card" id="history-right-5">graphical web browser</div>
+                        <div class="matching-card" id="history-right-6">world wide web</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="matching-set" id="matching-html" hidden>
+                <div class="set-header">
+                    <h2>HTML</h2>
+                    <h3>Match the element tag to it's use</h3>
+                </div>
+                <div class="cards">
+                    <div class="matching-col left">
+                        <div class="matching-card" id="html-left-1">bulleted list</div>
+                        <div class="matching-card" id="html-left-2">vertically stacked grouped elements</div>
+                        <div class="matching-card" id="html-left-3">link</div>
+                        <div class="matching-card" id="html-left-4">image</div>
+                        <div class="matching-card" id="html-left-5">numbered list</div>
+                        <div class="matching-card" id="html-left-6">side-by-side grouped elements</div>
+                    </div>
+                    <div class="matching-col right">
+                        <div class="matching-card" id="html-right-1">ol</div>
+                        <div class="matching-card" id="html-right-2">img</div>
+                        <div class="matching-card" id="html-right-3">div</div>
+                        <div class="matching-card" id="html-right-4">a</div>
+                        <div class="matching-card" id="html-right-5">span</div>
+                        <div class="matching-card" id="html-right-6">ul</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="matching-set" id="matching-css" hidden>
+                <div class="set-header">
+                    <h2>CSS</h2>
+                    <h3>Match the selector type to its syntax</h3>
+                </div>
+                <div class="cards">
+                    <div class="matching-col left">
+                        <div class="matching-card" id="css-left-1">pseudo</div>
+                        <div class="matching-card" id="css-left-2">id</div>
+                        <div class="matching-card" id="css-left-3">descendent</div>
+                        <div class="matching-card" id="css-left-4">element</div>
+                        <div class="matching-card" id="css-left-5">class</div>
+                        <div class="matching-card" id="css-left-6">compound</div>
+                    </div>
+                    <div class="matching-col right">
+                        <div class="matching-card" id="css-right-1">img.selector {}</div>
+                        <div class="matching-card" id="css-right-2">div h2 {}</div>
+                        <div class="matching-card" id="css-right-3">#selector {}</div>
+                        <div class="matching-card" id="css-right-4">.selector {}</div>
+                        <div class="matching-card" id="css-right-5">h1 {}</div>
+                        <div class="matching-card" id="css-right-6">a:hover {}, p:first-child {}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="matching-set" id="matching-framework" hidden>
+                <div class="set-header">
+                    <h2>Web Frameworks</h2>
+                    <h3>Match the aspect of web development to the framework</h3>
+                </div>
+                <div class="class">
+                    <div class="matching-col left">
+                        <div class="matching-card" id="framework-left-1">Frontend</div>
+                        <div class="matching-card" id="framework-left-2">Backend</div>
+                        <div class="matching-card" id="framework-left-3">CSS</div>
+                        <div class="matching-card" id="framework-left-4">CSS</div>
+                        <div class="matching-card" id="framework-left-5">Frontend</div>
+                        <div class="matching-card" id="framework-left-6">Backend</div>
+                    </div>
+                    <div class="matching-col right">
+                        <div class="matching-card" id="framework-right-1">Tailwind</div>
+                        <div class="matching-card" id="framework-right-2">Django</div>
+                        <div class="matching-card" id="framework-right-3">Angular</div>
+                        <div class="matching-card" id="framework-right-4">Bootstrap</div>
+                        <div class="matching-card" id="framework-right-5">React</div>
+                        <div class="matching-card" id="framework-right-6">Spring</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--display user's score and input displayname at the end-->
+        <div id="display-practice-score" hidden>
+            <h2 id="practice-score">Your Score:</h2>
+            <h3 id="practice-mistakes">Mistakes Made:</h3>
+            <input type="text" placeholder="displayname" id="displayname"><br>
+            <button type="submit" id="submit-practice">Add to Leaderboard</button>
+        </div>
+
+        <!--database with displaynames, number of mistakes, and points-->
+    </body>
+</html>
