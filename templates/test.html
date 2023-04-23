@@ -20,6 +20,29 @@
             <em>See how well you know the history of the web, HTML, CSS, and web frameworks</em>  
         </header>
         <!--form with multiple choice questions filled in with JSON parsing-->
+        <form id="test">
+            <h2>History of the Web</h2>
+            {% for question in history %}
+                <h3>{{ question.question }}</h3>
+                {% for option in question.options %}
+                <input type="radio" name={{ question.name }} id={{ option.id }}>
+                <label for={{ option.id }}>{{ option.option }}</label><br>
+                {% endfor %}
+            {% endfor %}
+
+            <h2>Web Development</h2>
+            {% for question in dev %}
+                <h3>{{ question.question }}</h3>
+                {% for option in question.options %}
+                <input type="radio" name={{ question.name }} id={{ option.id }}>
+                <label for={{ option.id }}>{{ option.option }}</label><br>
+                {% endfor %}
+            {% endfor %}
+
+            <label for="test-name">Name: </label>
+            <input type="text" id="test-name">
+            <button type="submit" id="submit-practice">Submit</button>
+        </form>
         
         <!--database with user's name, history score, development score, and total score-->
     </body>
