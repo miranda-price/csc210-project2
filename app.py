@@ -54,7 +54,7 @@ def DisplayTest():
     for i in range(len(data["development"])):
         question = data["development"]["q" + str(i+1)]
         options = [Option(question["answer"], "dq" + str(i+1) + "-1"), Option(question["wrong1"], "dq" + str(i+1) + "-1"), Option(question["wrong2"], "dq" + str(i+1) + "-1"), Option(question["wrong3"], "dq" + str(i+1) + "-1")]
-        newQuestion = Question("hq" + str(i+1), question["question"], question["answer"], options)
+        newQuestion = Question("dq" + str(i+1), question["question"], question["answer"], options)
         newQuestion.shuffle()
         devQuestions.append(newQuestion)
     for i in range(0, 4):

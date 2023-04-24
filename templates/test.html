@@ -22,13 +22,12 @@
             <h1>Test Your Knowledge</h1>
             <em>See how well you know the history of the web, HTML, CSS, and web frameworks</em>  
         </header>
-        <!--form with multiple choice questions filled in with JSON parsing-->
         <form id="test">
             <h2>History of the Web</h2>
             {% for question in history %}
                 <h3>{{ question.question }}</h3>
                 {% for option in question.options %}
-                <input type="radio" name={{ question.name }} id={{ option.id }}>
+                <input type="radio" class="hist-radio" name={{ question.name }} id={{ option.id }} value={{ question.answer == option.option }}>
                 <label for={{ option.id }}>{{ option.option }}</label><br>
                 {% endfor %}
             {% endfor %}
@@ -37,18 +36,55 @@
             {% for question in dev %}
                 <h3>{{ question.question }}</h3>
                 {% for option in question.options %}
-                <input type="radio" name={{ question.name }} id={{ option.id }}>
-                <label for={{ option.id }}>{{ option.option }}</label><br>
+                    <input type="radio" class="dev-radio" name={{ question.name }} id={{ option.id }} value={{ question.answer == option.option }}>
+                    <label for={{ option.id }}>{{ option.option }}</label><br>
                 {% endfor %}
             {% endfor %}
 
-            <div id="test-name-submit">
-                <label for="test-name">Name: </label>
-                <input type="text" id="test-name">
-                <button type="submit" id="submit-practice">Submit</button>
-            </div>
+            <button type="button" onclick="scoreTest()">Score</button>  
         </form>
+
+        <div id="test-name-submit" hidden>
+            <h2 id="total-score">Total Score: </h2>
+            <h2 id="hist-score">Web History Subscore: </h2>
+            <h2 id="dev-score">Dev Techonology Subscore: </h2>
+            <label for="test-name">Name: </label>
+            <input type="text" id="test-name">
+            <button type="submit" id="submit-practice">Submit</button>
+        </div>
         
         <!--database with user's name, history score, development score, and total score-->
+
+        <script>
+            function scoreTest() {
+                console.log('score')
+                var histOptions = document.getElementsByClassName('hist-radio');
+                var histScore = 0;
+                for (let i = 0; i < histOptions.length; i++) {
+                    console.log(histOptions[i])
+                    if (histOptions[i].checked) {
+                        if (histOptions[i].value == "True") {histScore +=  1;}
+                    }
+                }
+                var devOptions = document.getElementsByClassName('dev-radio');
+                var devScore = 0;
+                for (let i = 0; i < devOptions.length; i++) {
+                    if (devOptions[i].checked) {
+                        if (devOptions[i].value == "True") {devScore +=  1;}
+                    }
+                }
+                var totalScore = histScore + devScore;
+                histScore = (histScore/4) * 100
+                devScore = (devScore/6) * 100
+                totalScore = (totalScore/10 * 100)
+
+                document.getElementById('total-score').innerHTML = "Total Score: " + totalScore + "%";
+                document.getElementById('hist-score').innerHTML = "Web History Subscore: " + histScore + "%";
+                document.getElementById('dev-score').innerHTML = "Dev Technology Subscore: " + devScore + "%";
+
+                document.getElementById('test-name-submit').hidden = false;
+                document.getElementById('test').hidden = true;
+            }
+        </script>
     </body>
 </html>
