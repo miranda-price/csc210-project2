@@ -1,0 +1,109 @@
+/*
+color 1 - #3A3638
+color 2 - #C69AB1
+color 3 - #D48CB2
+color 4 - #B54581
+color 5 - #D42583
+*/
+
+html {
+    background-color: #3A3638;
+    color: #eae6e8;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2 {
+    color: #c69ab1;
+}
+
+h2, #test-name-submit {
+    margin-top: 40px;
+}
+
+#navbar {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    background-color: #D48CB2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 10vh;
+    width: 100vw;
+    margin: 0;
+}
+
+#navbar a {
+    color: #3A3638;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    opacity: 80%;
+    text-decoration: underline;
+}
+
+#navbar a.active {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#navbar a.active:hover {text-decoration: none;}
+
+body {
+    margin: 14vh auto 50px;
+    width: 70%;
+    max-width: 1000px;
+} 
+
+button {
+    background-color: #D48CB2;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+}
+
+table, thead, td {
+    border: 1px solid #eae6e8;
+    border-collapse: collapse;
+    padding: 5px 10px;
+}
+
+thead {
+    background-color: #c69ab1;
+    color: #3A3638;
+}
+
+#frameworks {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.cards {
+    display: flex;
+}
+
+.left {
+    margin-right: 100px;
+}
+
+.matching-card {
+    padding: 5px 10px;
+    margin: 10px 0;
+    border: 1px solid #eae6e8;
+}
+
+.matching-card.selected {
+    border-color: #c69ab1;
+    color: #c69ab1;
+}
+
+.matching-card.complete {
+    color: #eae6e8;
+    border-color:#eae6e8;
+    opacity: 60%;
+}
+  

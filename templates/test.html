@@ -4,6 +4,9 @@
         <title>Web Development - Test Your Knowledge</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="/static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     </head>
     
     <nav>
@@ -39,9 +42,11 @@
                 {% endfor %}
             {% endfor %}
 
-            <label for="test-name">Name: </label>
-            <input type="text" id="test-name">
-            <button type="submit" id="submit-practice">Submit</button>
+            <div id="test-name-submit">
+                <label for="test-name">Name: </label>
+                <input type="text" id="test-name">
+                <button type="submit" id="submit-practice">Submit</button>
+            </div>
         </form>
         
         <!--database with user's name, history score, development score, and total score-->

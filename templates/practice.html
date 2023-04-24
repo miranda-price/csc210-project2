@@ -4,13 +4,16 @@
         <title>Web Development - Practice</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="/static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     </head>
     
     <nav>
         <ul id="navbar">
             <li><a href="/">About the Web</a></li>
-            <li><a href="/practice">Practice</a></li>
-            <li><a href="/test" class="active">Test Your Knowledge</a></li>
+            <li><a href="/practice" class="active">Practice</a></li>
+            <li><a href="/test">Test Your Knowledge</a></li>
         </ul>
     </nav>
 
@@ -102,7 +105,7 @@
                     <h2>Web Frameworks</h2>
                     <h3>Match the aspect of web development to the framework</h3>
                 </div>
-                <div class="class">
+                <div class="cards">
                     <div class="matching-col left">
                         <div class="matching-card framework-incomplete" id="framework-left-1">Frontend</div>
                         <div class="matching-card framework-incomplete" id="framework-left-2">Backend</div>
@@ -127,7 +130,7 @@
         <div id="display-practice-score" hidden>
             <h2 id="practice-score"></h2>
             <h3 id="practice-mistakes"></h3>
-            <input type="text" placeholder="displayname" id="displayname"><br>
+            <input type="text" placeholder="displayname" id="displayname">
             <button type="submit" id="submit-practice">Add to Leaderboard</button>
         </div>
 
@@ -170,8 +173,8 @@
                     console.log('correct')
                     document.getElementById(selected.originalTarget.id).classList.remove("history-incomplete")
                     document.getElementById(event.originalTarget.id).classList.remove("history-incomplete")
-                    document.getElementById(selected.originalTarget.id).classList.add("history-complete")
-                    document.getElementById(event.originalTarget.id).classList.add("history-complete")
+                    document.getElementById(selected.originalTarget.id).classList.add("complete")
+                    document.getElementById(event.originalTarget.id).classList.add("complete")
                     matched += 1;
                     score += 10;
                 }
@@ -220,8 +223,8 @@
                     console.log('correct')
                     document.getElementById(selected.originalTarget.id).classList.remove("html-incomplete")
                     document.getElementById(event.originalTarget.id).classList.remove("html-incomplete")
-                    document.getElementById(selected.originalTarget.id).classList.add("html-complete")
-                    document.getElementById(event.originalTarget.id).classList.add("html-complete")
+                    document.getElementById(selected.originalTarget.id).classList.add("complete")
+                    document.getElementById(event.originalTarget.id).classList.add("complete")
                     matched += 1;
                     score += 10;
                 }
@@ -270,8 +273,8 @@
                     console.log('correct')
                     document.getElementById(selected.originalTarget.id).classList.remove("css-incomplete")
                     document.getElementById(event.originalTarget.id).classList.remove("css-incomplete")
-                    document.getElementById(selected.originalTarget.id).classList.add("css-complete")
-                    document.getElementById(event.originalTarget.id).classList.add("css-complete")
+                    document.getElementById(selected.originalTarget.id).classList.add("complete")
+                    document.getElementById(event.originalTarget.id).classList.add("complete")
                     matched += 1;
                     score += 10;
                 }
@@ -320,8 +323,8 @@
                     console.log('correct')
                     document.getElementById(selected.originalTarget.id).classList.remove("framework-incomplete")
                     document.getElementById(event.originalTarget.id).classList.remove("framework-incomplete")
-                    document.getElementById(selected.originalTarget.id).classList.add("framework-complete")
-                    document.getElementById(event.originalTarget.id).classList.add("framework-complete")
+                    document.getElementById(selected.originalTarget.id).classList.add("complete")
+                    document.getElementById(event.originalTarget.id).classList.add("complete")
                     matched += 1;
                     score += 10;
                 }
