@@ -1,0 +1,35 @@
+<!Doctype >
+<html>
+   <head>
+      <title>Web Development - About the Web</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="/static/style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+   </head>
+   <nav>
+      <ul id="navbar">
+         <li><a href="/" class="active">About the Web</a></li>
+         <li><a href="/practice">Practice</a></li>
+         <li><a href="/test">Test Your Knowledge</a></li>
+      </ul>
+   </nav>
+   <body>
+      <header>
+         <h1>Learn About Web Development</h1>
+         <em>Read some user-submitted webdev facts!</em>  
+      </header>
+      <section class="lead">
+      {% for row in data %}
+      <div class="responses">
+         <h3><strong>{{ row[1] }}</strong></h3>
+         <p>Name of user: {{ row[2] }}</p>
+         <p>Topic: {{ row[4] }}</p>
+         <p>Message: {{ row[5] }}</p>
+      </div>
+      {% endfor %}
+      <div class="row">
+      </div>
+   </body>
+</html>
