@@ -81,6 +81,10 @@ def DisplayLearn():
 def DisplayPractice():
     return(render_template("practice.html"))
 
+@app.route('/feedback')
+def feedbackform():
+    return render_template('contact.html')
+
 @app.route('/sendmessage')
 @login_required
 def editinv():
