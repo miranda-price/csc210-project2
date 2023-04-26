@@ -61,6 +61,8 @@ class User(UserMixin, db.Model):
     
 db.create_all()
 
+connection = sqlite3.connect('database.db')
+
 login_manager = LoginManager()
 login_manager.login_view = "login"
 login_manager.init_app(app)
@@ -89,6 +91,12 @@ def feedbackform():
 @login_required
 def editinv():
     return render_template('sendmessage.html', name=current_user.name)
+
+@app.route("/responses", methods=["GET", "POST"])
+def inventory():
+    cursor = connection.execute("SELECT * from response ")
+    data = cursor.fetchall()
+    return render_template("responses.html", data=data)
 
 @app.route('/login')
 def login():
@@ -137,19 +145,6 @@ def signup_post():
 def logout():
     logout_user()
     return render_template('logout.html')
-
-@app.route("/question", methods=["GET", "POST"])
-def question():
-    form = QuestionForm()
-    if form.validate_on_submit():
-       name = form.name.data
-       email = form.email.data
-       subject = form.subject.data
-       message = form.message.data
-
-       return name + "<br /> " + email + "<br /> " + subject + "<br /> " + message
-
-    return render_template('qna.html', form=form)
 
 @app.route('/test')
 def DisplayTest():
