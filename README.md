@@ -11,6 +11,8 @@ Navigation is done solely through the navigation bar at the top.  About the Web,
 - "/test" page with a randomly generated test on web development history and technology
 
 ## Database Configuration
+Response columns: id (primary), name, email, subject, message
+User columns: id, email, password, name
 
 ## Aditional Requirements
 - Front end application: sophisticated behavior server-side with JavaScript found in practice.html and used on the "/practice" page.  Users can play a matching game with four sections: history, html, css, and web frameworks.  Each section is shown one at a time.  Matching cards change style when selected and when correctly matched.  Users gain 10 points for a correct match and lose 5 points for an incorrect match, and once all four sections are completed the score is shown.
